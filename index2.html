@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FRIENDS</title>
+<link rel="icon" href="friend.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+</head>
+<style>
+*
+{
+margin : 0;
+box-sizing: border-box;
+}
+
+#myVideo 
+{
+position: fixed;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size:cover;
+min-width: 100%;
+z-index: -1;
+}
+
+#heading-1
+{
+float:left;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#heading-2
+{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#image1
+{
+float:left;
+height: 40px;
+border-radius: 50%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+#image2
+{
+float:right;
+height: 40px;
+border-radius: 20%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+section1
+{
+overflow: scroll;
+position: fixed;
+width: 40%;
+height: 100%;
+text-align: center;
+background-color: white;
+padding-bottom: 30px;
+padding-top: 80px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+background-image: linear-gradient(rgb(226, 220, 202), rgb(190, 173, 88));   
+}
+aside
+{
+overflow: scroll;
+position: fixed;
+left:60%;
+width: 40%;
+height: 100%;
+text-align: center;
+background-color: white;
+padding-bottom: 30px;
+padding-top: 0px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+background-image: linear-gradient(rgb(226, 220, 202), rgb(190, 173, 88));   
+}
+header
+{
+position: fixed;
+padding: 10px 10px 0px 10px;
+top: 0;
+width: 100%;
+height: 46px;
+padding: 3px;
+color: white;
+text-align: center;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));
+}
+
+footer
+{
+
+position: fixed;
+padding: 10px 10px 0px 10px;
+bottom: 0;
+width: 100%;
+height: 40px;
+padding: 3px;
+color: white;
+text-align: center;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));
+}
+
+nav
+{
+position: fixed;
+padding: 10px 10px 0px 10px;
+top: 45px;
+width: 40%;
+height: 80px;
+color: white;
+background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));    
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+#navv
+{
+
+max-width: 200px;
+text-align: center;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 20px;
+word-wrap: break-word;
+white-space: normal;
+overflow: hidden;
+margin: auto;  
+text-shadow: -1px -1px 3px #020202, 
+2px 2px 4px #1b1b1b;
+
+}
+
+
+.card 
+{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+max-width: 300px;
+margin: auto;
+text-align: center;
+font-family: arial;
+margin-bottom: 10px;
+background-image: linear-gradient(to bottom,rgb(255, 255, 255),rgb(228, 168, 56));
+}
+
+.title {
+color: grey;
+font-size: 18px;
+}
+
+button {
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-color: #000;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+}
+
+#follow-button {
+color: #3399FF;
+font-family: "Helvetica";
+font-size: 10pt;
+background-color: #ffffff;
+border: 1px solid;
+border-color: #3399FF;
+border-radius: 3px;
+width: 85px;
+height: 30px;
+position: absolute;	 
+top: 50px;
+left: 50px;	
+cursor: hand;		    
+}
+
+a {
+text-decoration: none;
+font-size: 22px;
+color: black;
+}
+
+button:hover, a:hover {
+opacity: 0.7;
+}
+.image-container img 
+{
+transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover 
+{
+transform: scale(1.1);
+}
+
+
+#logo-owl
+{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: -1;
+opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+#login-container 
+{
+height: 250px;
+width: 300px;
+padding: 20px;
+border-radius: 5px;
+position: relative;
+box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+margin: auto;
+background-image: linear-gradient(to bottom,rgb(204, 101, 70),rgb(194, 149, 81));
+
+
+.profile-img1
+{
+height: 100px;
+width: 100px;
+background: url("bicon1.png");
+background-size: cover;
+background-position: center;
+position: absolute;
+top: -35px;
+left: -40px;
+border-radius: 50%;
+box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+}
+
+.profile-img2
+{
+height: 100px;
+width: 100px;
+background: url('ficon3.png');
+background-size: cover;
+background-position: center;
+position: absolute;
+top: -35px;
+left: -40px;
+border-radius: 50%;
+box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.profile-img3
+{
+height: 100px;
+width: 100px;
+background: url("ficon2.png");
+background-size: cover;
+background-position: center;
+position: absolute;
+top: -35px;
+left: -40px;
+border-radius: 50%;
+box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+
+
+footer 
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: $darkBackground;
+color: white;
+width: 100%;
+position: absolute;
+bottom: 0;
+height: 30px;
+padding: 0 20px;
+margin-left: -20px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+background-image: linear-gradient(to bottom,rgb(184, 140, 71),rgb(221, 153, 50));
+div 
+{
+display: flex;
+p:first-child
+{
+margin-right: 10px;
+border-right: 4px solid white;
+padding-right: 10px;
+}
+}
+}
+
+
+
+
+#hpp
+{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: white;
+text-shadow: #000 2px 2px;
+text-shadow:
+1px 1px 2px black,
+0 0 1em rgb(255, 255, 255),
+0 0 0.2em rgb(0, 0, 0);
+color: white;
+font:
+1.5em Georgia,
+serif;
+padding: 15px;
+
+}
+p2 {
+position: relative;
+font-size: 13px;
+letter-spacing: 1px;
+font-family: sans-serif;
+display:table;
+margin: auto;
+cursor:pointer;
+transition:.6s;
+color: white;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-shadow: 3px 0px 7px rgba(81,67,21,0.8), 
+-3px 0px 7px rgba(81,67,21,0.8), 
+0px 4px 7px rgba(81,67,21,0.8);
+}
+p2:before,
+p2:after {
+content:attr(data-text);
+transition:.6s;
+}
+p2:before {
+left: 0;
+top: 0;
+position: absolute;
+z-index:-1;
+text-shadow:
+0px 0px,
+0px 0px,
+0px 0px,
+0px 0px,
+0px 0px,
+0px 0px,
+0px 0px,
+0px 0px,
+0px 0px,
+0px 0px;
+-webkit-mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+}
+p2:hover {
+transform:translate(-10px,-10px);
+}  
+p2:hover:before {
+text-shadow:
+1px 1px,
+2px 2px,
+3px 3px,
+4px 4px,
+5px 5px,
+6px 6px,
+7px 7px,
+8px 8px,
+9px 9px,
+10px 10px;
+}
+#ppp
+{
+color: white;
+
+}
+
+#frq
+{
+border: none;
+outline: 0;
+display: inline-block;
+padding: 8px;
+color: white;
+background-image: linear-gradient(to bottom,rgb(184, 71, 71),rgb(221, 73, 50));
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+margin: auto;
+margin-top:20px;
+border-radius: 10px;
+
+}
+button:active
+{ 
+transform: scale(1.02); 
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+} 
+button:hover
+{
+opacity: 0.7;
+}
+
+button2:active
+{ 
+transform: scale(0.98); 
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+} 
+button2:hover
+{
+opacity: 0.7;
+}
+
+button3:active
+{ 
+transform: scale(0.98); 
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+} 
+button3:hover
+{
+opacity: 0.7;
+}
+
+button4:active
+{ 
+transform: scale(0.98); 
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+} 
+button4:hover
+{
+opacity: 0.7;
+}
+
+
+
+
+</style>
+
+
+
+<body>
+
+
+<video autoplay muted loop id="myVideo">
+<source src="vd.mp4" type="video/mp4">
+</video>
+
+
+<section1>
+
+<div class="card">
+<div class="image-container">
+<img src="barbatdesen2..png" style="width:100% ;border-radius: 50%;">
+</div>
+<h1 >Michael D.</h1>
+<p class="title">CEO of AHN-Transport</p>
+<p>Lives in : Arkansas<br>Studied in : Germany</p>
+<div style="margin: 24px 0;" class="image-container">
+<a href="#"><img src="ico-instagram.png" style="width: 35px;"></a>
+<a href="#"><img src="facebook-ico.png" style="width: 40px;"></a>
+<a href="#"><img src="linked-in.png" style="width: 35px;"></a>
+</div>
+<a href="index5.html"><p><button>Contact</button></p></a>
+</div>
+
+<div class="card">
+<div class="image-container">
+<img src="barbatdesen3.png" style="width:100% ; border-radius: 50%;">
+</div>
+<h1>Joseph S.</h1>
+<p class="title">Teacher at School of Nashville</p>
+<p>Lives in : Tenessee<br>Studied in : Texas</p>
+<div style="margin: 24px 0;" class="image-container">
+<a href="#"><img src="ico-instagram.png" style="width: 35px;"></a>
+<a href="#"><img src="facebook-ico.png" style="width: 40px;"></a>
+<a href="#"><img src="linked-in.png" style="width: 35px;"></a>
+</div>
+<a href="index6.html"><p><button>Contact</button></p></a>
+</div>
+
+</section1>
+
+<aside>
+
+<div id="login-container" style="margin-top:180px">
+
+<div class="profile-img1"></div>
+
+<div>
+<h1 id="hpp">John Doe</h1>
+<p2 data-text="Hi,I am John and i LOVE music.Send me a friend  request and.I will talk with you for hours about it!"></p2> 
+<p><button2 id="frq" onclick="changeLabel()">Send a friend request!</button2></p>
+<script>
+function changeLabel() {
+const button2 = 
+document.querySelector('button2');
+button2.innerHTML = 'Friend request sent!';
+}
+</script>
+</div>
+
+
+<footer>
+<div class="likes">
+<img src="heart.png" style="width: 15px;position: relative; right: 6px;">
+<p>70</p>
+</div>
+<div class="projects">
+<p>Projects</p>
+<p>14</p>
+</div>
+</footer>
+</div>
+
+<div id="login-container" style="margin-top:50px">
+<div class="profile-img2"></div>
+    <div>
+    <h1 id="hpp">Ana Harper</h1>
+    <p2 data-text="Hi,my name is Ana and I love french and pscychology and I am a law student.I recommand the IMGO app!!!!"></p2> 
+    <p><button4 id="frq" onclick="changeLabel4()">Send a friend request!</button4></p>
+    <script>
+        function changeLabel4() {
+            const button2 = 
+                document.querySelector('button4');
+            button2.innerHTML = 'Friend request sent!';
+        }
+    </script>
+    </div>
+<footer>
+<div class="likes">
+<img src="heart.png" style="width: 15px;position: relative; right: 6px;">
+<p>1K</p>
+</div>
+<div class="projects">
+<p>Projects</p>
+<p>120</p>
+</div>
+</footer>
+</div>
+
+<div id="login-container" style="margin-top: 50px;margin-bottom: 20px;">
+<div class="profile-img3"></div>
+<div>
+    <h1 id="hpp">Harpar Ava</h1>
+    <p2 data-text="My name is Harpar Ava and I enjoy talking with people online using the app IMGO! I am sure we will get along very well!"></p2> 
+    <p><button3 id="frq" onclick="changeLabel3()">Send a friend request!</button3></p>
+    <script>
+        function changeLabel3() {
+            const button3 = 
+                document.querySelector('button3');
+            button3.innerHTML = 'Friend request sent!';
+        }
+    </script>
+    </div>
+<footer>
+<div class="likes">
+<img src="heart.png" style="width: 15px;position: relative; right: 6px;">
+<p>786</p>
+</div>
+<div class="projects">
+<p>Projects</p>
+<p>98</p>
+</div>
+</footer>
+</div>
+
+<nav> <h1 id="navv" >Come and meet new people : </h1> </nav>
+
+
+
+
+
+
+</aside>
+
+
+
+
+
+<div class="image-container">
+<header>
+<img src="friend.png" id="image1" >
+<h1 id="heading-1" style="text-shadow: 2px 2px 2px black;">Friends</h1>
+<a href="index.html"><img src="home.png" id="image2"></a>
+</header>
+</div>
+
+<div id="logo-owl" class="image-container">
+<marquee direction="up"><img src="icon.png" style="width: 1000px;"></marquee>
+</div>
+
+
+<footer>
+<h1 id="heading-2" style="text-shadow: 2px 2px 2px black;"><marquee behavior="scroll" direction="left" scrollamount="20">© IMGOwls</marquee></h1>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CHATS</title>
+<link rel="icon" href="inbox.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+*
+{
+margin : 0;
+box-sizing: border-box;
+}
+#myVideo 
+{
+position: fixed;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size:cover;
+min-width: 100%;
+z-index: -1;
+}
+header
+{
+position: fixed;
+padding: 10px 10px 0px 10px;
+top: 0;
+width: 100%;
+height: 46px;
+padding: 3px;
+color: white;
+text-align: center;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));
+
+}
+#heading-1
+{
+float:left;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#image1
+{
+float:left;
+height: 40px;
+margin-right: 5px;
+
+
+}
+.image-container img 
+{
+transition: transform 0.3s ease-in-out;
+}
+.image-container img:hover 
+{
+transform: scale(1.1);
+}
+#chats
+{
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(rgb(220, 200, 171),rgb(197, 152, 74));
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    
+}
+#hdr
+{
+
+width: 90%;
+height:10%;
+position: fixed;
+top: 13%;
+left: 50%;
+transform: translate(-50%, -50%);
+box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+background-image: linear-gradient(rgb(183, 134, 61),rgb(197, 123, 98));
+border-radius: 40px;
+}
+#ftr
+{
+
+width: 92%;
+height:8%;
+position: fixed;
+top: 93%;
+left: 50%;
+transform: translate(-50%, -50%);
+box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+background-image: linear-gradient(rgb(211, 198, 177),rgb(244, 162, 134));
+border-radius: 30px;    
+}
+#sec
+{
+
+width: 90%;
+height: 62%;
+position: fixed;
+top: 53%;
+left: 50%;
+transform: translate(-50%, -50%);
+box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+background-image: linear-gradient(rgb(159, 74, 60),rgb(190, 112, 86));
+border-radius: 30px;    
+}
+#textBox
+{
+position: fixed;
+top: 50%;
+left: 45%;
+transform: translate(-50%, -50%);
+width: 65%;
+height: 57%;
+border-radius: 15px;
+padding: 10px;
+background-image: linear-gradient(rgb(255, 255, 255),rgb(221, 119, 85));
+}
+#sendVoice
+{
+    width: 20px;
+    position: fixed;
+    top: 50%;
+    left: 82%;
+    transform: translate(-50%, -50%);   
+}
+#sendPhoto
+{
+    width: 30px;
+    position: fixed;
+    top: 50%;
+    left: 7%;
+    transform: translate(-50%, -50%);   
+}
+#sendImages
+{
+    width: 30px;
+    position: fixed;
+    top: 50%;
+    left: 91%;
+    transform: translate(-50%, -50%);   
+}
+#om
+{
+    position: fixed;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);   
+    width: 70px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#nume
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 3px 0px 7px rgba(81,67,21,0.8), 
+	  -3px 0px 7px rgba(81,67,21,0.8), 
+	  0px 4px 7px rgba(81,67,21,0.8);
+}
+#mes1
+{
+    width: 250px;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 30%;
+    left: 60%;
+    transform: translate(-50%, -50%);   
+    z-index: 1; 
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(215, 190, 182));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 30px;
+    padding-top:15px;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: rgb(222, 193, 193) 2px 2px;
+}
+#mes2
+{
+    width: 250px;
+    height: 120px;
+    background-color: white;
+    position: fixed;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);   
+    z-index: 1; 
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(215, 190, 182));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 30px;
+    padding-top:15px;
+    padding-right: 20px;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: rgb(222, 193, 193) 2px 2px;
+}
+#mes3
+{
+    width: 250px;
+    height: 190px;
+    background-color: white;
+    position: fixed;
+    top: 68%;
+    left: 40%;
+    transform: translate(-50%, -50%);   
+    z-index: 1; 
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    background-image: linear-gradient(rgb(255, 255, 255),rgb(215, 190, 182));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 30px;
+    padding-top:15px;
+    padding-right: 25px;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: rgb(222, 193, 193) 2px 2px;
+}
+#image2
+{
+float:right;
+height: 40px;
+border-radius: 20%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+</style>
+<body>
+<header>
+    <div class="image-container">
+    <img src="inbox.png" id="image1" >
+    <h1 id="heading-1" style="text-shadow: 2px 2px 2px black;">Chats</h1>
+    <a href="index.html"><img src="home.png" id="image2"></a>
+    </div>
+</header>
+<video autoplay muted loop id="myVideo">
+    <source src="vd.mp4" type="video/mp4">
+</video>
+<div id="chats" >
+    <header2 id="hdr">
+        <img src="barbatdesen2..png" id="om">
+        <h1 id="nume">Michael</h1>
+    </header2>
+        <div id="mes1"><p>hellloooo,how are you mike?</p></div>
+        <div id="mes2"><p>do you think we can hang out on friday? i realllyy miss you. let me know!!</p></div>
+        <div id="mes3"><p>yooo,i have been really busy this month but i also really want to see you. friday sounds perfect,you can come to my place.can't wait to see you!!🙏🙏</p></div>
+    <section id="sec">
+    </section>
+    <footer id="ftr">
+        <img src="sendPhoto.png" id="sendPhoto"> 
+        <img src="sendVoice.png" id="sendVoice">
+        <img src="sendPhotos.png" id="sendImages">
+        <input type="text" id="textBox" placeholder="Write a message...">
+    </footer>
+</div>
+</body>
+</html>

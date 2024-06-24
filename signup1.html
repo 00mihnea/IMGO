@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SIGN UP</title>
+<link rel="icon" href="icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+</head>
+<style type="text/css">
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container
+{
+    position: fixed;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#myVideo 
+{
+position: fixed;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size:cover;
+min-width: 100%;
+z-index: -1;
+}
+
+footer
+{
+    
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    padding: 3px;
+    background: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+    background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));
+}
+
+#heading-1
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input
+{
+    border-radius: 5px;
+    width: 200px;
+    height: 27px;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+label,h1
+{
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    color:white ;
+    font-weight: bold;
+    
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input
+{
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+    font-weight: bold;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#das:active
+{ 
+transform: scale(0.98); 
+box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+} 
+#das:hover
+{
+opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop id="myVideo">
+     <source src="vd.mp4" type="video/mp4">
+</video>
+
+
+
+
+
+<div class="container">
+
+    <h1>Sign up</h1>
+
+    <form method="GET" action="index4.html" >
+
+        <label for="username" style="margin-right: 100px;">Username: </label>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="gmail"style="margin-right: 135px;">Gmail: </label>
+        <input type="text" id="gmail" name="gmail"><br>
+
+        <label for="Password" style="margin-right: 100px;">Password: </label>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="Password"style="margin-right: 20px ;">Confirm Password: </label>
+        <input type="password" id="confirmpassword" name="confirmpassword"><br>
+        
+        <input id="das" type="submit" value="CONFIRM">
+
+    </form>
+</div>
+
+<footer>
+    <h1 id="heading-1" style="text-shadow: 2px 2px 2px black;"><marquee behavior="scroll" direction="left" scrollamount="20">© IMGOwls</marquee></h1>
+</footer>
+
+</body>
+
+</html>        

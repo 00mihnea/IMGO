@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Profile</title>
+<link rel="icon" href="profile.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<style>
+*
+{
+margin : 0;
+box-sizing: border-box;
+}
+#myVideo 
+{
+position: fixed;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size:cover;
+min-width: 100%;
+z-index: -1;
+}
+footer
+{
+position: fixed;
+padding: 10px 10px 0px 10px;
+bottom: 0;
+width: 100%;
+height: 40px;
+padding: 3px;
+color: white;
+text-align: center;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));
+}
+header
+{
+position: fixed;
+padding: 10px 10px 0px 10px;
+top: 0;
+width: 100%;
+height: 46px;
+padding: 3px;
+color: white;
+text-align: center;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));
+}
+
+#heading-1
+{
+float:left;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#image1
+{
+float:left;
+height: 40px;
+border-radius: 50%;
+margin-right: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+#image2
+{
+float:right;
+height: 40px;
+border-radius: 20%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.image-container img 
+{
+transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover 
+{
+transform: scale(1.1);
+}
+#heading-2
+{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#inf
+{
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.prof
+{
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 530px;
+    border-radius: 20%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    background-image: linear-gradient(62deg, #772f06 0%, #957012 100%);
+}
+#h1
+{
+    position: relative;
+    text-align: center;
+    top:-50px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+#res
+{
+    margin-top: 20px;
+    position: relative;
+    top: 170px;
+    left:22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+.desc
+{
+    position: relative;
+    top : 150px;
+}
+.rotate { 
+      animation: rotation 3s infinite linear;
+    }
+    @keyframes rotation {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(359deg); }
+    }
+
+
+
+label
+{
+    display:block;
+    width: auto;
+    background: #c07732;
+    color:#fff;
+    padding:12px;
+    margin:10px auto;
+    border-radius:5px;
+    cursor:pointer;
+    position: relative;
+    bottom: 180px;
+    right: 65px;
+    font-size: 10px;
+}
+input
+{
+        display:none;
+}
+
+#profile-pic
+{
+    width: 100px;
+    position: relative;
+    bottom: 90px;
+    right:-70px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+</style>
+
+
+
+<body>
+
+
+<header>
+    <div class="image-container">
+    <img src="profile.png" id="image1" >
+    <h1 id="heading-1" style="text-shadow: 2px 2px 2px black;">Profile</h1>
+    <a href="index.html"><img src="home.png" id="image2"></a>
+    </div>
+</header>
+
+
+
+<footer>
+<h1 id="heading-2" style="text-shadow: 2px 2px 2px black;"><marquee behavior="scroll" direction="left" scrollamount="20">© IMGOwls</marquee></h1>
+</footer>
+
+<video autoplay muted loop id="myVideo">
+    <source src="vd.mp4" type="video/mp4">
+</video>
+
+    <div class="prof">
+
+    
+    <div id="inf">
+<div>
+        <div> 
+            <img src="profile.png" id="profile-pic" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"> 
+            <label style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;" for="input-file" id="upi">Change profile picture.</label>
+            <input type="file" accept="image/jpeg,   image/png,  image/jpg" id="input-file">    
+        </div>
+</div>
+
+<script>
+
+let profilePic = document.getElementById("profile-pic");
+let inputFile = document.getElementById("input-file");
+
+inputFile.onchange =function()
+{
+profilePic.src= URL.createObjectURL(inputFile.files[0]);
+}
+
+
+
+</script>
+    </div>
+    <p id="res"></p>
+    <h1 id="h1">Profile<br>details:</h1>
+    <div class="desc">
+
+    <img class="rotate" src="icon.png" style="width: 250px;position: relative;left:25px;bottom:20px;box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;border-radius: 50%;">
+    
+    <script>
+        
+    var data=window.location.search;
+    var params = new URLSearchParams(data);
+    console.log(params);
+    var username = params.get("username"); 
+    var gmail = params.get("gmail");
+    var password = params.get("password"); 
+    var confirmpassword= params.get("confirmpassword");
+    
+    var getData = "Name : "+username+"<br><br>";
+        getData += "Gmail : "+gmail+"<br>";
+
+    console.log(data);
+    document.getElementById("res").innerHTML= getData;
+    input.value = localStorage.getItem("savedItem")
+
+
+
+    </script>
+
+</body>
+</html>

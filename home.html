@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>ACOUNT</title>
+<link rel="icon" href="friend.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<style>
+*
+{
+margin : 0;
+box-sizing: border-box;
+}
+#myVideo 
+{
+position: fixed;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size:cover;
+min-width: 100%;
+z-index: -1;
+}
+
+header
+{
+position: fixed;
+padding: 10px 10px 0px 10px;
+top: 0;
+width: 100%;
+height: 46px;
+padding: 3px;
+color: white;
+text-align: center;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+background-image: linear-gradient(rgb(192, 146, 77),rgb(166, 166, 91));
+}
+
+#heading-1
+{
+float:left;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#image1
+{
+float:left;
+height: 40px;
+margin-right: 5px;
+border-radius: 50%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+
+.image-container img 
+{
+transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover 
+{
+transform: scale(1.1);
+}
+
+
+
+#sign
+{
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    
+}
+#sign2
+{
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    
+}
+
+#signHead
+{
+    text-align: center;
+    position: relative;
+    top:35px;
+    font-size: 25px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+#logo-owl1
+{
+    border-radius: 20%;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+   
+}
+#logo-owl2
+{
+    border-radius: 20%;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+}
+a
+{
+    text-decoration: none;
+}
+
+</style>
+
+
+<body>
+
+<header>
+    <div class="image-container">
+    <img src="profile.png" id="image1" >
+    <h1 id="heading-1" style="text-shadow: 2px 2px 2px black;">Acount</h1>
+    </div>
+</header>
+
+
+
+<video autoplay muted loop id="myVideo">
+    <source src="vd.mp4" type="video/mp4">
+</video>
+
+
+<div id="logo-owl1" class="image-container">
+    <img src="icon.png" style="width: 300px;">
+</div>
+
+<div id="logo-owl2" class="image-container">
+    <img src="icon.png" style="width: 300px;">
+</div>
+
+<div id="sign">
+    <a href="signup1.html"><h1 id="signHead">SIGN UP</h1></a>
+</div>
+
+<div id="sign2">
+    <a href="login1.html"><h1 id="signHead">SIGN IN</h1></a>
+</div>
+
+
+
+</body>
+</html>
